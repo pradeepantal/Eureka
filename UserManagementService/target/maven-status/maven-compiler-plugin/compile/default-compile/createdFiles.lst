@@ -1,0 +1,5 @@
+com\digi\dfs\model\InitData.class
+com\digi\dfs\model\Contact.class
+com\spice\dfs\repository\UserRepository.class
+com\digi\dfs\controller\UserRestController.class
+com\digi\dfs\users\UserManagementApplication.class

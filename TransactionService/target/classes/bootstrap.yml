@@ -1,0 +1,24 @@
+# Spring properties
+spring:
+  application:
+     name: transaction-service
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+     
+user-service:
+   ribbon:
+     DeploymentContextBasedVipAddresses: user-service
+     listOfServers: localhost:${SERVER.PORT}
+     NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+     ServerListRefreshInterval: 30000 
+      
+
+# HTTP Server
+server:
+  port: 3333   # HTTP (Tomcat) port
